@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>div etiketi</title>
+</head>
+<body>
+    <!-- div etiketleri hep alt alta geliyor.
+    Alttaki div leri yanyana yazsak bile çıktı alt alta oluyor.-->
+    <div>Buraya Logo Gelecek</div><div>Burayada Menü Gelecek</div>
+
+    <!--block seviyesinde elemanlar aksi belirtilmedikçe satırda altalta gelirler
+    1-div
+    2-form
+    3-h1....h6
+    4-ul
+    5-li
+    6-ol
+    7-p
+    8-pre
+    9-table-->
+
+    <!--inline seviyesinde elemanlar aksi belirtilmedikçe satırda yanyana gelirler
+    1-a
+    2-img
+    3-input
+    4-label
+    5-span
+    6-strong-->
+
+    <!-- Boyle hep yanyana-->
+    <a href="">AnaSayfa</a>
+    <a href="">Hakkımızda</a>
+    <a href="">Referanslar</a>
+    <a href="">İletişim</a>
+    
+    <!--şimdi li etiketinin içine alınca hepsi altalta oldu.-->
+    <li><a href="">AnaSayfa</a></li>
+    <li><a href="">Hakkımızda</a></li>
+    <li><a href="">Referanslar</a></li>
+    <li><a href="">İletişim</a></li>
+
+    <!--div etiketini block seviyesi etiketlerin içine koymak yanlış bir kullanım oluyor.
+    div etiketi daha kapsamlı bir etiket.-->
+    <h1>
+        <div>h1 in içindeki div etiketi</div>
+    </h1>
+
+    <!--doğru kullanım-->
+    <div>
+        <h1>Merhaba</h1>
+    </div>
+    
+</body>
+</html> 

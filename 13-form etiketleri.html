@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Etiketleri</title>
+</head>
+<body>
+    <!--type,name,value,placeholder,maxlength,size,disable-->
+    <form name="uyeKayit" id="uye_kayit_formu" method="post" action="">
+        <input type="text" name="adınız" value="" placeholder="Lütfen Adınızı Yazınız" maxlength="10" size="75" disabled="disabled"/>
+    </form>
+
+    <!-- label ve form uygulaması-->
+    <form name="kayit_formu" id="kayit_formu" method="post" action="">
+        <label for="adi">Adın:</label><input type="text" name="adi" id="adi" value=""/><br/>
+        <label for="soyadi">Soyadın:</label><input type="text" name="soyadi" id="soyadi" value=""/>
+    </form>
+
+    <!--password ve hidden etiketi-->
+    <form name="kayit_formu" id="kayit_formu" method="post" action="">
+        <label for="adi">Adın:</label><input type="text" name="adi" id="adi" value=""/><br/>
+        <label for="soyadi">Soyadın:</label><input type="text" name="soyadi" id="soyadi" value=""/><br/>
+        <label for="parola">Parola:</label><input type="password" name="parola" id="parola" value=""/><br/>
+        <label for="parola_tekrar">Parola Tekrar:</label><input type="password" name="parola_tekrar" id="parola_tekrar" value=""/>
+
+        <input type="hidden" value="">
+    </form>
+
+    <!--checkbox ve radio etiketi-->
+    <fieldset>
+   <legend> Web Tasarımında Kullanılan Programlar</legend> <br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop"/><br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop" /><br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop" checked="checked"/><br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop" checked="checked"/><br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop" checked="checked"/><br/>
+        <label for="photoshop">Photoshop</label><input type="checkbox" name="photoshop" id="photoshop" value="photoshop" /><br/>
+    </fieldset>
+     <!-- burda tek seçim yapılabiliyor bunu sağlayan ise name="cinsiyet" yazımı-->
+    <fieldset>
+    <legend>Cinsiyetiniz Nedir?</legend>
+    <br/>
+    <label>Kadın</label><input type="radio" name="cinsiyet" id="kadin" value="kadin"/>
+    <label>Erkek</label><input type="radio" name="cinsiyet" id="erkek" value="erkek"/>
+    </fieldset>
+    
+    <form>
+    <!--textarea,submit ve reset butonları ve resim yükleme-->
+    <label for="mesaj">Mesajınız</label>
+    <textarea name="mesaj" id="mesaj" columns="10" rows="10">
+
+    </textarea><br/>
+    <label for="yukle">Resmim Yükle</label><input type="file" id="yukle" value=""/><br/><br/>
+    <input type="submit" value="Mesajı Gönder"/>
+    <input type="reset" value="Vazgeçtim"/>
+
+    <!--select,option ve optgroup etiketleri-->
+    Bir Ülke Seçiniz
+    <select name="select">
+        <option name="" value="ulke" disabled>Ülkeler</option>
+        <optgroup label="Grup-1">
+        <option name="" value="ulke">Türkiye</option>
+        <option name="" value="ulke">Amerika</option>
+        <option name="" value="ulke">Rusya</option>
+        <option name="" value="ulke">Çin</option>
+        </optgroup>
+        <optgroup label="Grup-2">
+        <option name="" value="ulke">Türkiye</option>
+        <option name="" value="ulke">Amerika</option>
+        <option name="" value="ulke">Rusya</option>
+        <option name="" value="ulke">Çin</option>
+        </optgroup>
+        <optgroup label="Grup-3">
+        <option name="" value="ulke">Türkiye</option>
+        <option name="" value="ulke">Amerika</option>
+        <option name="" value="ulke">Rusya</option>
+        <option name="" value="ulke">Çin</option>
+        </optgroup>
+    </select>
+
+    <!--fieldset ve legend etiketleri
+    belirlenen yerleri gruplamamıza yarıyor.-->
+    </form>
+
+    <!-- HTML5 ile gelen özellikler-->
+    <form name="html" method="get">
+        <input type="date" name="date" pattern="\d{4}-\d{2}-\d{2}" title="YYYY-MM-DD"/>
+        <input type="color" name="color" value="" />
+        <input type="email" name="email" multiple/>
+        <input type="search" name="search"/>
+        <input type="url" name="url"/>
+        <input type="number" name="number" min="1" max="10" value="5"/>
+        <label>Aralık Degeri</label><input type="range" name="range" min="0" max="10000" step="10" value="50"/>
+        <input type="submit" value="Mesajı Gönder"/>
+    </form>
+
+    <form name="test" action="" method="get"><br/>
+        <input type="text" name="adı" value="adı" readonly/><br/>
+        <input type="text" name="soyadı" value="soyadı" required/><br/>
+        <input type="text" name="konu" value="konu"/><br/>
+        <input type="text" name="sehir" value="sehir"/><br/>
+        <input type="submit" value="gonder"/><br/><br/><br/>
+        <input type="text" list="Veriler"/>
+        <datalist id="Veriler">
+            <option value="iphone"></option>
+            <option value="Samsung"></option>
+            <option value="LG"></option>
+        </datalist>
+
+    </form>
+</body>
+</html>
